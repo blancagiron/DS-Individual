@@ -13,7 +13,7 @@ function App() {
   const [kilometros, setKilometros] = useState(""); // resultado de la conversión
 
   const convertirDistancia = () => {
-    if (millas !== "") { // si millas no está vacío
+    if (millas !== "" && millas > 0) { // si millas no está vacío
       const servicioLA = new ServicioLA(parseFloat(millas)); // instanciar el servicio de LA y almacenar la distancia en millas
       const adaptador = new Adaptador(servicioLA); // instanciar el adaptador y pasarle el servicio de LA
       setKilometros(adaptador.getDistanciaKm()); // se guarda el resultado 
@@ -49,6 +49,7 @@ function App() {
               value={millas}
               onChange={(e) => setMillas(e.target.value)}
               className="w-full p-4 outline-none text-xl bg-transparent"
+              min = "0"
             />
           </div>
           <p className="text-sm text-gray-600 mb-4">Distancia en millas enviada por la aplicación de navegación.</p>
