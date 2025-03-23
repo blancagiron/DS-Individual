@@ -1,12 +1,46 @@
-# React + Vite
+# Conversor de Distancias (Millas a Kilómetros)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto implementa un conversor de distancias de millas a kilómetros utilizando el patrón de diseño Adapter. La aplicación permite adaptar las distancias proporcionadas por una aplicación de navegación de Los Ángeles (en millas) para que sean compatibles con un sistema de información geográfica en España (en kilómetros).
 
-Currently, two official plugins are available:
+## Solución al Ejercicio 5 Individual
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este proyecto es la solución al **Ejercicio 5 Individual** que consiste en implementar una solución que permita a un servicio de información geográfica español interpretar y utilizar las distancias provistas por una aplicación de navegación de Los Ángeles, sin modificar las clases existentes.
 
-## Expanding the ESLint configuration
+### Patrón de Diseño Utilizado
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Se ha implementado el **patrón Adapter (Adaptador)** que permite la compatibilidad entre interfaces incompatibles. En este caso:
+
+- **ServicioLA**: Representa el servicio de Los Ángeles (Adaptee) que proporciona distancias en millas.
+- **Adaptador**: Convierte las distancias en millas a kilómetros (Adapter).
+- **App**: Cliente que utiliza el adaptador para obtener las distancias en el formato deseado.
+
+## Instalación
+
+Para acceder al código fuente del proyecto:
+
+1. Clonar el repositorio:
+```bash
+ git clone git@github.com:blancagiron/DS-Individual.git  
+```
+2. Navegar a la carpeta del proyecto:
+```
+cd DS-individual/conversor-distancias
+```
+3. Instalar las dependencias:
+```
+npm install
+```
+4. Iniciar la app:
+```
+npm run dev
+```
+5. Abrir el navegador en la dirección indicada (generalmente http://localhost:5173)
+## Uso de la aplicación:
+
+1. En el campo "Ingrese millas", introduzca la distancia en millas que desea convertir.
+2. Haga clic en el botón "Convertir".
+3. La distancia convertida a kilómetros se mostrará en el campo "Distancia Convertida para España".
+
+
+## Autor
+Blanca Girón Ricoy
