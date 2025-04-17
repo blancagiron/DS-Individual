@@ -10,6 +10,7 @@ Este repositorio almacena apuntes, ejercicios individuales y prácticas relacion
 DS-individual/
 │── 📜 README.md  → Información del repositorio
 │── 📂 conversor-distancias → primer ejercicio individual de las prácticas.
+│── 📂 P2 → ejercicios individuales de la Práctica 2
 ```
 
 
